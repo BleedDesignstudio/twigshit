@@ -1,0 +1,40 @@
+{
+    "name": "bleed/twigshit",
+    "description": "A pile of crap filters and function for Twig.",
+    "type": "craft-plugin",
+    "version": "0.0.1",
+    "keywords": [
+        "craft",
+        "cms",
+        "craftcms",
+        "craft-plugin",
+        "twigshit"
+    ],
+    "support": {
+        "docs": "https://github.com/BleedDesignstudio/twigshit/blob/master/README.md",
+        "issues": "https://github.com/BleedDesignstudio/twigshit/issues"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Bleed",
+            "homepage": "http://bleed.com"
+        }
+    ],
+    "require": {
+        "craftcms/cms": "^3.0.0-RC1"
+    },
+    "autoload": {
+        "psr-4": {
+          "bleed\\twigshit\\": "src/"
+        }
+    },
+    "extra": {
+        "name": "twigshit",
+        "handle": "twigshit",
+        "hasCpSettings": false,
+        "hasCpSection": false,
+        "changelogUrl": "https://raw.githubusercontent.com/BleedDesignstudio/twigshit/master/CHANGELOG.md",
+        "class": "bleed\\twigshit\\Twigshit"
+    }
+}
