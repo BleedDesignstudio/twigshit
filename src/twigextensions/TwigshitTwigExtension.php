@@ -47,7 +47,8 @@ class TwigshitTwigExtension extends \Twig_Extension
     public function getFunctions()
     {
         return [
-            new \Twig_SimpleFunction('sendFile', [$this, 'internalSendFile'])
+            new \Twig_SimpleFunction('sendFile', [$this, 'internalSendFile']),
+            new \Twig_SimpleFunction('splitItemsIntoRows', [$this, 'internalSplitItemsIntoRows'])
         ];
     }
 
@@ -57,16 +58,27 @@ class TwigshitTwigExtension extends \Twig_Extension
      * @return boolean
      */
     public function internalValidateEmail($email = null) {
+
         if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
             return true;
         }
+        
         return false;
+
     }
 
-    public function internalSendFile($file = null, $url = null)
-    {
+    public function internalSendFile($file = null, $url = null) {
+
         $response = new \Craft\web\response;
         $contents = file_get_contents($url.$file);
         $response->sendFile($url.$file)->send();
+
+    }
+
+    public function internalSplitItemsIntoRows($itemAmount = 0) {
+        $amount = $itemAmount;
+        $itemsInRows = []
+
+        return [];
     }
 }

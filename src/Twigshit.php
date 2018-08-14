@@ -23,7 +23,7 @@ use yii\base\Event;
  *
  * @author    Bleed
  * @package   Twigshit
- * @since     0.0.1
+ * @since     0.0.2
  *
  */
 class Twigshit extends Plugin
@@ -42,7 +42,7 @@ class Twigshit extends Plugin
     /**
      * @var string
      */
-    public $schemaVersion = '0.0.1';
+    public $schemaVersion = '1.0.0';
 
     // Public Methods
     // =========================================================================
